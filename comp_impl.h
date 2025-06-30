@@ -17,7 +17,9 @@ template <typename T> struct CompImpled : Comp<T> {
   virtual T op() override { return impl_->op(); }
 };
 
-template <typename T, template <typename> class C> struct CompBuilder {
+template <typename T, template <typename> class C>
+  requires requires { typename C<T>; }
+struct CompBuilder {
   template <class Injector> unique_ptr<C<T>> build(const Injector &injector) {
     auto impl = injector.template create<shared_ptr<CompImpl<T>>>();
     return make_unique<C<T>>(impl);

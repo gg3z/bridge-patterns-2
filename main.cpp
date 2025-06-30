@@ -26,20 +26,8 @@ void test_bridge_with_builder() {
   std::cout << "implementation 2: op() = " << comp2->op() << endl;
 }
 
-#if 0
-void test_bridge_with_factory_injection() {
-  CompBuilder<int, Comp<int>> builder;
-  cout << "With builder and injector:\n";
-  auto injector = di::make_injector(
-      di::bind<ImplFactory>.to([]() { return make_unique<CompImpl1<int>>(); }));
-  auto comp1 = builder.build(injector);
-  std::cout << "implementation 1 from factory: op() = " << comp1->op() << endl;
-}
-#endif
-
 int main() {
   test_minimal_bridge();
   test_bridge_with_builder();
-  // test_bridge_with_factory_injection();
   return 0;
 }

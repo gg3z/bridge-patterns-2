@@ -1,7 +1,7 @@
 # bridge-patterns-2
 
 This repo covers various ways of implementing a bridge pattern in c++17/20.
-Compared to the neighboring repo bridge-patterns, it is more advanced, including usage of templates, factories and even nested templates.
+Compared to the neighboring repo bridge-patterns, it is more advanced, including usage of templates, concepts, factories and even nested templates.
 
 This repo is part of my deeper practice on design patterns and will hopefully be of benefit to some visitors.
 The code is intentionally simplified and skeleton-like, so that the particular flavor of the bridge pattern comes through.

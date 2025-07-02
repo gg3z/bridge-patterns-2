@@ -12,10 +12,12 @@ A couple of implementations of the bridge pattern are coded and explained:
 
 - minimal bridge (where the implementation is encapsulated)
 - bridge with injector and builder (using boost/di)
+- bridge with factory only
+- bridge with std::variant/std::visit
 
-I plan to add a number of further implementations of the bridge pattern because there is a wide range of applications and each tends to benefit most from a particular flavor of the pattern.
+The explanations are minimal; in the future (weeks ?) I plan to add comments and more illuminating examples.
 
 Buid notes:
 
-- I used clang 19.1.2 to build with CMake in VS code.
-- also builds with gcc compiler on Linux
+- I used clang 19.1.2 on Windows 10 to build with CMake in VS code.
+- also builds with gcc compiler on Linux, also with CMake in VS code.

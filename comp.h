@@ -11,5 +11,6 @@ concept fundamental_or_string = is_fundamental_v<T> || is_same_v<T, string>;
 
 template <fundamental_or_string T> struct Comp {
   virtual ~Comp() = default;
-  virtual T op() = 0;
+  virtual T op() const = 0;
+  virtual T opx2(T x) const = 0;
 };
